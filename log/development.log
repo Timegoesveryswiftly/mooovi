@@ -781,3 +781,433 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'products'
 [0m
   [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+
+
+Started GET "/" for ::1 at 2017-04-01 08:02:11 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (9.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+LoadError (Unable to autoload constant ProductsController, expected /Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/app/controllers/products_controller.rb to define it):
+  activesupport (4.2.5) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.8ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 08:07:35 +0900
+
+LoadError (Unable to autoload constant ProductsController, expected /Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/app/controllers/products_controller.rb to define it):
+  activesupport (4.2.5) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateProducts (20170328134915)
+  [1m[36m (36.1ms)[0m  [1mDROP TABLE `products`[0m
+  [1m[35mSQL (28.1ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170328134915'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20170328134915)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/db/migrate/20170328134915_create_products.rb:6)
+  [1m[35m (46.1ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `image_url` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (12.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170328134915')
+  [1m[36m (11.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateProducts (20170328134915)
+  [1m[36m (28.6ms)[0m  [1mDROP TABLE `products`[0m
+  [1m[35mSQL (6.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170328134915'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20170328134915)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/db/migrate/20170328134915_create_products.rb:6)
+  [1m[35m (13.6ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `image_url` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170328134915')
+  [1m[36m (11.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.7ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('オオカミ少女と黒王子', 'http://image.eiga.k-img.com/images/movie/82939/poster2/200.jpg?1456105504', '2017-04-01 08:05:57', '2017-04-01 08:05:57')
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ヒメアノ～ル', 'http://image.eiga.k-img.com/images/movie/82031/200x133.jpg?1458617968', '2017-04-01 08:05:57', '2017-04-01 08:05:57')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エンド・オブ・キングダム', 'http://image.eiga.k-img.com/images/movie/84396/poster2/200.jpg?1456105395', '2017-04-01 08:05:58', '2017-04-01 08:05:58')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('素敵なサプライズ　ブリュッセルの奇妙な代理店', 'http://image.eiga.k-img.com/images/movie/83818/poster2/200.jpg?1452581497', '2017-04-01 08:05:58', '2017-04-01 08:05:58')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('手をつないでかえろうよ　シャングリラの向こうで', 'http://image.eiga.k-img.com/images/movie/83316/photo/704e52e243018fe7/320.jpg?1460515565', '2017-04-01 08:05:58', '2017-04-01 08:05:58')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('復活', 'http://image.eiga.k-img.com/images/movie/84404/photo/b1ea2006aea01769/320.jpg?1462845161', '2017-04-01 08:05:59', '2017-04-01 08:05:59')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('あのひと', 'http://image.eiga.k-img.com/images/movie/82788/photo/e8e36657b9a98933/320.jpg?1460950312', '2017-04-01 08:05:59', '2017-04-01 08:05:59')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('或る終焉', 'http://image.eiga.k-img.com/images/movie/83700/poster2/200.jpg?1456993166', '2017-04-01 08:05:59', '2017-04-01 08:05:59')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('CONFLICT 最大の抗争', 'http://image.eiga.k-img.com/images/movie/83914/photo/ef49227bafc3396f/320.jpg?1462161535', '2017-04-01 08:05:59', '2017-04-01 08:05:59')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('燐寸少女　マッチショウジョ', 'http://image.eiga.k-img.com/images/movie/84204/photo/c71da94191642fcc/320.jpg?1461206311', '2017-04-01 08:06:00', '2017-04-01 08:06:00')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エルヴィス、我が心の歌', 'http://image.eiga.k-img.com/images/movie/84452/poster2/200.jpg?1456978768', '2017-04-01 08:06:00', '2017-04-01 08:06:00')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('女ヒエラルキー底辺少女', 'http://image.eiga.k-img.com/images/movie/84904/photo/242d864dadbc8856/320.jpg?1462879638', '2017-04-01 08:06:00', '2017-04-01 08:06:00')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('リリカルスクールの未知との遭遇', 'http://image.eiga.k-img.com/images/movie/84165/photo/941cd4573c4e2310/320.jpg?1458876636', '2017-04-01 08:06:00', '2017-04-01 08:06:00')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('若葉のころ', 'http://image.eiga.k-img.com/images/movie/84418/poster2/200.jpg?1456916251', '2017-04-01 08:06:01', '2017-04-01 08:06:01')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スノーホワイト　氷の王国', 'http://image.eiga.k-img.com/images/movie/83708/photo/3306840c771af07d/320.jpg?1458877882', '2017-04-01 08:06:01', '2017-04-01 08:06:01')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('神様メール', 'http://image.eiga.k-img.com/images/movie/83805/poster2/200.jpg?1458803848', '2017-04-01 08:06:01', '2017-04-01 08:06:01')[0m
+  [1m[35m (5.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('マイケル・ムーアの世界侵略のススメ', 'http://image.eiga.k-img.com/images/movie/84410/poster2/200.jpg?1458179953', '2017-04-01 08:06:02', '2017-04-01 08:06:02')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海よりもまだ深く', 'http://image.eiga.k-img.com/images/movie/83901/poster2/200.jpg?1458007228', '2017-04-01 08:06:02', '2017-04-01 08:06:02')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ディストラクション・ベイビーズ', 'http://image.eiga.k-img.com/images/movie/82632/poster2/200.jpg?1457666272', '2017-04-01 08:06:02', '2017-04-01 08:06:02')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女椿', 'http://image.eiga.k-img.com/images/movie/84316/poster2/200.jpg?1455242124', '2017-04-01 08:06:02', '2017-04-01 08:06:02')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('オオカミ少女と黒王子', 'http://image.eiga.k-img.com/images/movie/82939/poster2/200.jpg?1456105504', '2017-04-01 08:08:46', '2017-04-01 08:08:46')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (7.1ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ヒメアノ～ル', 'http://image.eiga.k-img.com/images/movie/82031/200x133.jpg?1458617968', '2017-04-01 08:08:47', '2017-04-01 08:08:47')[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エンド・オブ・キングダム', 'http://image.eiga.k-img.com/images/movie/84396/poster2/200.jpg?1456105395', '2017-04-01 08:08:47', '2017-04-01 08:08:47')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('素敵なサプライズ　ブリュッセルの奇妙な代理店', 'http://image.eiga.k-img.com/images/movie/83818/poster2/200.jpg?1452581497', '2017-04-01 08:08:47', '2017-04-01 08:08:47')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('手をつないでかえろうよ　シャングリラの向こうで', 'http://image.eiga.k-img.com/images/movie/83316/photo/704e52e243018fe7/320.jpg?1460515565', '2017-04-01 08:08:48', '2017-04-01 08:08:48')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('復活', 'http://image.eiga.k-img.com/images/movie/84404/photo/b1ea2006aea01769/320.jpg?1462845161', '2017-04-01 08:08:48', '2017-04-01 08:08:48')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('あのひと', 'http://image.eiga.k-img.com/images/movie/82788/photo/e8e36657b9a98933/320.jpg?1460950312', '2017-04-01 08:08:48', '2017-04-01 08:08:48')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('或る終焉', 'http://image.eiga.k-img.com/images/movie/83700/poster2/200.jpg?1456993166', '2017-04-01 08:08:48', '2017-04-01 08:08:48')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('CONFLICT 最大の抗争', 'http://image.eiga.k-img.com/images/movie/83914/photo/ef49227bafc3396f/320.jpg?1462161535', '2017-04-01 08:08:49', '2017-04-01 08:08:49')
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('燐寸少女　マッチショウジョ', 'http://image.eiga.k-img.com/images/movie/84204/photo/c71da94191642fcc/320.jpg?1461206311', '2017-04-01 08:08:49', '2017-04-01 08:08:49')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エルヴィス、我が心の歌', 'http://image.eiga.k-img.com/images/movie/84452/poster2/200.jpg?1456978768', '2017-04-01 08:08:49', '2017-04-01 08:08:49')
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('女ヒエラルキー底辺少女', 'http://image.eiga.k-img.com/images/movie/84904/photo/242d864dadbc8856/320.jpg?1462879638', '2017-04-01 08:08:50', '2017-04-01 08:08:50')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('リリカルスクールの未知との遭遇', 'http://image.eiga.k-img.com/images/movie/84165/photo/941cd4573c4e2310/320.jpg?1458876636', '2017-04-01 08:08:50', '2017-04-01 08:08:50')
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('若葉のころ', 'http://image.eiga.k-img.com/images/movie/84418/poster2/200.jpg?1456916251', '2017-04-01 08:08:50', '2017-04-01 08:08:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スノーホワイト　氷の王国', 'http://image.eiga.k-img.com/images/movie/83708/photo/3306840c771af07d/320.jpg?1458877882', '2017-04-01 08:08:50', '2017-04-01 08:08:50')
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('神様メール', 'http://image.eiga.k-img.com/images/movie/83805/poster2/200.jpg?1458803848', '2017-04-01 08:08:51', '2017-04-01 08:08:51')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('マイケル・ムーアの世界侵略のススメ', 'http://image.eiga.k-img.com/images/movie/84410/poster2/200.jpg?1458179953', '2017-04-01 08:08:51', '2017-04-01 08:08:51')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海よりもまだ深く', 'http://image.eiga.k-img.com/images/movie/83901/poster2/200.jpg?1458007228', '2017-04-01 08:08:51', '2017-04-01 08:08:51')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ディストラクション・ベイビーズ', 'http://image.eiga.k-img.com/images/movie/82632/poster2/200.jpg?1457666272', '2017-04-01 08:08:52', '2017-04-01 08:08:52')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女椿', 'http://image.eiga.k-img.com/images/movie/84316/poster2/200.jpg?1455242124', '2017-04-01 08:08:52', '2017-04-01 08:08:52')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('オオカミ少女と黒王子', 'http://image.eiga.k-img.com/images/movie/82939/poster2/200.jpg?1456105504', '2017-04-01 08:09:17', '2017-04-01 08:09:17')
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ヒメアノ～ル', 'http://image.eiga.k-img.com/images/movie/82031/200x133.jpg?1458617968', '2017-04-01 08:09:17', '2017-04-01 08:09:17')[0m
+  [1m[35m (5.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エンド・オブ・キングダム', 'http://image.eiga.k-img.com/images/movie/84396/poster2/200.jpg?1456105395', '2017-04-01 08:09:17', '2017-04-01 08:09:17')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('素敵なサプライズ　ブリュッセルの奇妙な代理店', 'http://image.eiga.k-img.com/images/movie/83818/poster2/200.jpg?1452581497', '2017-04-01 08:09:17', '2017-04-01 08:09:17')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('手をつないでかえろうよ　シャングリラの向こうで', 'http://image.eiga.k-img.com/images/movie/83316/photo/704e52e243018fe7/320.jpg?1460515565', '2017-04-01 08:09:18', '2017-04-01 08:09:18')
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('復活', 'http://image.eiga.k-img.com/images/movie/84404/photo/b1ea2006aea01769/320.jpg?1462845161', '2017-04-01 08:09:18', '2017-04-01 08:09:18')[0m
+  [1m[35m (5.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('あのひと', 'http://image.eiga.k-img.com/images/movie/82788/photo/e8e36657b9a98933/320.jpg?1460950312', '2017-04-01 08:09:18', '2017-04-01 08:09:18')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('或る終焉', 'http://image.eiga.k-img.com/images/movie/83700/poster2/200.jpg?1456993166', '2017-04-01 08:09:19', '2017-04-01 08:09:19')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('CONFLICT 最大の抗争', 'http://image.eiga.k-img.com/images/movie/83914/photo/ef49227bafc3396f/320.jpg?1462161535', '2017-04-01 08:09:19', '2017-04-01 08:09:19')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('燐寸少女　マッチショウジョ', 'http://image.eiga.k-img.com/images/movie/84204/photo/c71da94191642fcc/320.jpg?1461206311', '2017-04-01 08:09:19', '2017-04-01 08:09:19')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エルヴィス、我が心の歌', 'http://image.eiga.k-img.com/images/movie/84452/poster2/200.jpg?1456978768', '2017-04-01 08:09:19', '2017-04-01 08:09:19')
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('女ヒエラルキー底辺少女', 'http://image.eiga.k-img.com/images/movie/84904/photo/242d864dadbc8856/320.jpg?1462879638', '2017-04-01 08:09:20', '2017-04-01 08:09:20')[0m
+  [1m[35m (6.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('リリカルスクールの未知との遭遇', 'http://image.eiga.k-img.com/images/movie/84165/photo/941cd4573c4e2310/320.jpg?1458876636', '2017-04-01 08:09:20', '2017-04-01 08:09:20')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('若葉のころ', 'http://image.eiga.k-img.com/images/movie/84418/poster2/200.jpg?1456916251', '2017-04-01 08:09:20', '2017-04-01 08:09:20')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スノーホワイト　氷の王国', 'http://image.eiga.k-img.com/images/movie/83708/photo/3306840c771af07d/320.jpg?1458877882', '2017-04-01 08:09:20', '2017-04-01 08:09:20')
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('神様メール', 'http://image.eiga.k-img.com/images/movie/83805/poster2/200.jpg?1458803848', '2017-04-01 08:09:21', '2017-04-01 08:09:21')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('マイケル・ムーアの世界侵略のススメ', 'http://image.eiga.k-img.com/images/movie/84410/poster2/200.jpg?1458179953', '2017-04-01 08:09:21', '2017-04-01 08:09:21')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海よりもまだ深く', 'http://image.eiga.k-img.com/images/movie/83901/poster2/200.jpg?1458007228', '2017-04-01 08:09:21', '2017-04-01 08:09:21')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ディストラクション・ベイビーズ', 'http://image.eiga.k-img.com/images/movie/82632/poster2/200.jpg?1457666272', '2017-04-01 08:09:22', '2017-04-01 08:09:22')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女椿', 'http://image.eiga.k-img.com/images/movie/84316/poster2/200.jpg?1455242124', '2017-04-01 08:09:22', '2017-04-01 08:09:22')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('オオカミ少女と黒王子', 'http://image.eiga.k-img.com/images/movie/82939/poster2/200.jpg?1456105504', '2017-04-01 08:10:00', '2017-04-01 08:10:00')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ヒメアノ～ル', 'http://image.eiga.k-img.com/images/movie/82031/200x133.jpg?1458617968', '2017-04-01 08:10:00', '2017-04-01 08:10:00')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エンド・オブ・キングダム', 'http://image.eiga.k-img.com/images/movie/84396/poster2/200.jpg?1456105395', '2017-04-01 08:10:01', '2017-04-01 08:10:01')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('素敵なサプライズ　ブリュッセルの奇妙な代理店', 'http://image.eiga.k-img.com/images/movie/83818/poster2/200.jpg?1452581497', '2017-04-01 08:10:01', '2017-04-01 08:10:01')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('手をつないでかえろうよ　シャングリラの向こうで', 'http://image.eiga.k-img.com/images/movie/83316/photo/704e52e243018fe7/320.jpg?1460515565', '2017-04-01 08:10:01', '2017-04-01 08:10:01')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('復活', 'http://image.eiga.k-img.com/images/movie/84404/photo/b1ea2006aea01769/320.jpg?1462845161', '2017-04-01 08:10:02', '2017-04-01 08:10:02')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('あのひと', 'http://image.eiga.k-img.com/images/movie/82788/photo/e8e36657b9a98933/320.jpg?1460950312', '2017-04-01 08:10:02', '2017-04-01 08:10:02')
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('或る終焉', 'http://image.eiga.k-img.com/images/movie/83700/poster2/200.jpg?1456993166', '2017-04-01 08:10:02', '2017-04-01 08:10:02')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('CONFLICT 最大の抗争', 'http://image.eiga.k-img.com/images/movie/83914/photo/ef49227bafc3396f/320.jpg?1462161535', '2017-04-01 08:10:02', '2017-04-01 08:10:02')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('燐寸少女　マッチショウジョ', 'http://image.eiga.k-img.com/images/movie/84204/photo/c71da94191642fcc/320.jpg?1461206311', '2017-04-01 08:10:03', '2017-04-01 08:10:03')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エルヴィス、我が心の歌', 'http://image.eiga.k-img.com/images/movie/84452/poster2/200.jpg?1456978768', '2017-04-01 08:10:03', '2017-04-01 08:10:03')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('女ヒエラルキー底辺少女', 'http://image.eiga.k-img.com/images/movie/84904/photo/242d864dadbc8856/320.jpg?1462879638', '2017-04-01 08:10:03', '2017-04-01 08:10:03')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('リリカルスクールの未知との遭遇', 'http://image.eiga.k-img.com/images/movie/84165/photo/941cd4573c4e2310/320.jpg?1458876636', '2017-04-01 08:10:04', '2017-04-01 08:10:04')
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('若葉のころ', 'http://image.eiga.k-img.com/images/movie/84418/poster2/200.jpg?1456916251', '2017-04-01 08:10:04', '2017-04-01 08:10:04')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スノーホワイト　氷の王国', 'http://image.eiga.k-img.com/images/movie/83708/photo/3306840c771af07d/320.jpg?1458877882', '2017-04-01 08:10:04', '2017-04-01 08:10:04')
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('神様メール', 'http://image.eiga.k-img.com/images/movie/83805/poster2/200.jpg?1458803848', '2017-04-01 08:10:04', '2017-04-01 08:10:04')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('マイケル・ムーアの世界侵略のススメ', 'http://image.eiga.k-img.com/images/movie/84410/poster2/200.jpg?1458179953', '2017-04-01 08:10:05', '2017-04-01 08:10:05')
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海よりもまだ深く', 'http://image.eiga.k-img.com/images/movie/83901/poster2/200.jpg?1458007228', '2017-04-01 08:10:05', '2017-04-01 08:10:05')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ディストラクション・ベイビーズ', 'http://image.eiga.k-img.com/images/movie/82632/poster2/200.jpg?1457666272', '2017-04-01 08:10:05', '2017-04-01 08:10:05')
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女椿', 'http://image.eiga.k-img.com/images/movie/84316/poster2/200.jpg?1455242124', '2017-04-01 08:10:05', '2017-04-01 08:10:05')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
