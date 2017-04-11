@@ -25,9 +25,9 @@ class Scraping
     title = page.at('.entry-title').inner_text if page.at('.entry-title') # タグ内のテキスト文を返す
 
     image_url = page.at('.entry-content img')[:src] if page.at('.entry-content img') # 画像があれば
-    director = page.at('.director span').inner_text if page.at('.director span') # 画像があれば
-    detail = page.at('.entry-content p').inner_text if page.at('.entry-content p') # 画像があれば
-    open_date = page.at('.date span').inner_text if page.at('.date span') # 画像があれば
+    director = page.at('.director span').inner_text if page.at('.director span') # があれば
+    detail = page.at('.entry-content p').inner_text if page.at('.entry-content p') # があれば
+    open_date = page.at('.date span').inner_text if page.at('.date span') # があれば
 
     product = Product.where(title: title).first_or_initialize
     product.image_url = image_url
