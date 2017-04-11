@@ -17,7 +17,7 @@ class Scraping
     page = agent.get(link)
     title = page.at('.entry-title').inner_text # タグ内のテキスト文を返す
     image_url = page.at('.entry-content img')[:src] if page.at('.entry-content img') # 画像があれば
-    product = Product.new(title: title, image_url: image_url)
+    product = Product.where(title: title, image_url: image_url).first_or_initialize
     product.save
   end
 end
@@ -31,7 +31,7 @@ end
 #     elements.each do |ele|
 #       links << ele.get_attribute('href')
 #     end
-# 
+#
 #     links.each do |link|
 #       get_product('http://review-movie.herokuapp.com/' + link)
 #     end
