@@ -1,7 +1,10 @@
   <div id="main_cnt_wrapper">
     <div id="yjContentsBody">
       <div class="yjContainer">
-        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <span class="yjGuid">
+          <a id="yjContentsStart" name="yjContentsStart"></a>
+          <img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1">
+        </span>
         <div id="yjMain">
           <article class="section">
             <div class="container">
@@ -15,8 +18,8 @@
                   <li class="col">
                     <a href="/products/<%= product.id %>"><div class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)"></div></a>
                     <div class="thumbnail__caption">
-                      <h3 class="text-xsmall text-overflow" title="タイトル">
-                        タイトル
+                      <h3 class="text-xsmall text-overflow" title="<%= product.title %>"><!-- ループ内の変数だからこんな書き方-->
+                        <%= product.title %>
                       </h3>
                       <p class="text-small">
                         <span class="rating-star">

@@ -6679,3 +6679,1779 @@ WHERE fk.referenced_column_name is not null
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mUPDATE `products` SET `director` = 'パトリシア・リゲン', `detail` = '2010年8月、チリ・サンホセ鉱山で33人の作業員が坑道の崩落によって地下深くに閉じ込められ、69日後に全員が奇跡の生還を果たした実話をハリウッドが映画化。地上から700メートルも隔絶された暗闇の中で酸素も食べ物もなくなっていく極限状態に置かれながらも、決して諦めることなく生き抜こうとする作業員たちの姿をはじめ、彼らを救うべく奔走する救助チームや生還を信じて待ち続ける家族にもスポットを当て、世界中が見守った救出劇の真相を描き出す。厳しい状況下でもユーモアを忘れない主人公マリオ役をアントニオ・バンデラスが熱演するほか、共演にも「イングリッシュ・ペイシェント」のジュリエット・ビノシュ、「300 スリーハンドレッド」のロドリゴ・サントロら実力派が集結。「モーターサイクル・ダイアリーズ」の脚本家ホセ・リベーラが綿密な取材をもとに原案を手がけ、「ダラス・バイヤーズクラブ」のクレイグ・ボーテンが脚本に参加した。', `open_date` = '', `updated_at` = '2017-04-11 23:35:51' WHERE `products`.`id` = 328[0m
   [1m[35m (5.6ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2017-04-12 09:21:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ProductsController::Protuct):
+  app/controllers/products_controller.rb:3:in `index'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 09:21:53 +0900
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/review_site (2.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:                 </h2>
+    12:               </header>
+    13:               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
+    14:                 <% @products.each do |product| %>
+    15:                   <li class="col">
+    16:                     <a href="/products/<%= product.id %>"><div class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)"></div></a>
+    17:                     <div class="thumbnail__caption">
+  app/views/products/index.html.erb:14:in `_app_views_products_index_html_erb___2615072611978132479_70145778001220'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 09:24:46 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (21.9ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:24:47 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.5ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:24:47 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:25:17 +0900
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/review_site (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:                 </h2>
+    12:               </header>
+    13:               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
+    14:                 <% @products.each do |product| %>
+    15:                   <li class="col">
+    16:                     <a href="/products/<%= product.id %>"><div class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)"></div></a>
+    17:                     <div class="thumbnail__caption">
+  app/views/products/index.html.erb:14:in `_app_views_products_index_html_erb___2615072611978132479_70145778001220'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 09:26:26 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (21.2ms)
+Completed 200 OK in 35ms (Views: 24.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:26:26 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:26:26 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:26:26 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:26:26 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:26:26 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.1ms)
+
+
+Started GET "/products/19" for ::1 at 2017-04-12 09:26:42 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mProduct Load (6.0ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 19 LIMIT 1
+  Rendered products/show.html.erb within layouts/review_site (0.6ms)
+Completed 200 OK in 24ms (Views: 5.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:26:43 +0900
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:26:43 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:26:43 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:26:43 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:33:05 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.3ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:33:05 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:33:05 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:33:05 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:33:05 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:33:05 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:36:04 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:36:04 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:36:04 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:36:04 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:40:43 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (1.7ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:40:43 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:40:43 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.7ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:40:44 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:46:48 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.4ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:46:48 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.3ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:46:48 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:47:14 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (2.1ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:47:14 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.2ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:47:14 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:48:41 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (1.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:48:41 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.3ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:48:41 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:49:44 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (2.1ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:49:44 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:49:45 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.3ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:49:45 +0900
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:49:53 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:49:53 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:49:53 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:49:53 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:50:47 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.8ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:50:47 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.0ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:50:47 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:51:24 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (1.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:51:24 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:51:24 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.4ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:51:25 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 09:53:57 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.1ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:53:57 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.8ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:53:57 +0900
+
+
+Started GET "/fav.png" for ::1 at 2017-04-12 09:53:58 +0900
+
+ActionController::RoutingError (No route matches [GET] "/fav.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 09:56:59 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (3.4ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:56:59 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:56:59 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (113.3ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:57:00 +0900
+
+
+Started GET "/.fav.png" for ::1 at 2017-04-12 09:57:00 +0900
+
+ActionController::RoutingError (No route matches [GET] "/.fav.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 09:57:17 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.5ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 09:57:17 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 09:57:18 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.0ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 09:57:18 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:10:15 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (3.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:10:15 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:10:15 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (117.0ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:10:16 +0900
+
+
+Started GET "/path/fav.png" for ::1 at 2017-04-12 10:10:16 +0900
+
+ActionController::RoutingError (No route matches [GET] "/path/fav.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 10:11:40 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (1.6ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:11:41 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.2ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:11:41 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:12:38 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (1.7ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:12:38 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.5ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:12:38 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:13:56 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (1.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:13:56 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:13:56 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.3ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:13:57 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:15:06 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (1.7ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:15:06 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:15:07 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.5ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:15:07 +0900
+
+
+Started GET "/Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/app/views/layouts/fav.png" for ::1 at 2017-04-12 10:15:07 +0900
+
+ActionController::RoutingError (No route matches [GET] "/Users/kawaikatsuharu/projects/For_Study_Rails/mooovi/app/views/layouts/fav.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 10:15:58 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (2.7ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:15:58 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.8ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:15:58 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:16:10 +0900
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20
+  Rendered products/index.html.erb within layouts/review_site (2.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:16:10 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:16:10 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.2ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:16:11 +0900
+
+
+Started GET "/" for ::1 at 2017-04-12 10:17:01 +0900
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY id ASC LIMIT 20[0m
+  Rendered products/index.html.erb within layouts/review_site (1.7ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-04-12 10:17:01 +0900
+
+
+Started GET "/images/icons/icon-movie-poster.png" for ::1 at 2017-04-12 10:17:02 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie-poster.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/kawaikatsuharu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.2ms)
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-04-12 10:17:02 +0900
